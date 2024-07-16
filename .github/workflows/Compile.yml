@@ -19,9 +19,10 @@ jobs:
 
     - name: Clone AOSP Clang
       run: |
+       mkdir clang && cd clang
        wget https://github.com/ZyCromerZ/Clang/releases/download/13.0.1-20230207-release/Clang-13.0.1-20230207.tar.gz
        tar -xvf Clang-13.0.1-20230207.tar.gz
-       mv Clang-13.0.1-20230207 clang
+       cd ../
 
     - name: Download and extract Linaro
       run: |
